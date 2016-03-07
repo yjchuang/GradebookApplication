@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.lang.String;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class GradebookApplication {
 
@@ -85,6 +88,12 @@ public class GradebookApplication {
 		int numberOfCSStudents = 0;
 		int numberOfEEStudents = 0;
 		int numberOfISStudents = 0;
+		
+		DateFormat dateFormat = new SimpleDateFormat("/MM/dd/yyyy");
+		Date date = new Date(System.currentTimeMillis());
+		//System.out.println("Today is " + date);
+		System.out.println("Today is " + dateFormat.format(date));
+		
 
 		for (int i=0; i < numberOfStudent; ++i)
 		{
